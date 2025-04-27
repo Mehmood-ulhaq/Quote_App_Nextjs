@@ -13,7 +13,7 @@ const QuotesPage = async () => {
   const initialQuotes = await fetchQuotes();
 
   return (
-    <main className="flex min-h-[85%] flex-col items-center justify-between p-24">
+    <main className="flex min-h-[85%] flex-col items-center justify-between pt-16 md:pt-24 py-2">
       <QuotesList initialQuotes={initialQuotes} />
     </main>
   )
