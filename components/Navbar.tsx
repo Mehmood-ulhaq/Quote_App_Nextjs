@@ -16,7 +16,7 @@ const Navbar = () => {
     router.push('/login');
   }
 
-  console.log(isLoggingPage)
+  // console.log(isLoggingPage)
 
   const avatar = (<div className='group relative'>
                     <Image src={'/user.png'} alt="profile" width={30} height={30} className='w-7 cursor-pointer' />
