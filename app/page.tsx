@@ -1,8 +1,6 @@
 
 import QuotesList from "@/components/QuotesList";
-import AuthContext from "@/context/AuthContext";
-import { useRouter } from "next/navigation";
-import { useContext } from "react";
+
 
 async function fetchQuotes() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/quotes`, { cache: "no-store" });
@@ -23,3 +21,5 @@ const QuotesPage = async () => {
 };
 
 export default QuotesPage;
+
+

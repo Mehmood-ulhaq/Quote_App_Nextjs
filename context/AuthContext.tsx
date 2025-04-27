@@ -4,16 +4,20 @@ import { createContext, useState, ReactNode } from "react";
 
 type AuthContextType = {
   user: string | null;
-  setUser: React.Dispatch<React.SetStateAction<string | null>>;
+  setUser: (user: string | null) => void;
+  // setUser: React.Dispatch<React.SetStateAction<string | null>>;
   // username: string;
   // setUsername: React.Dispatch<React.SetStateAction<string>>;
   // password: string;
   // setPassword: React.Dispatch<React.SetStateAction<string>>;
   // isAuthenticated: boolean;
   // setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
-} | null;
+};
 
-const AuthContext = createContext<AuthContextType>(null);
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  setUser: () => {},
+});
 
 type Props = {
   children: ReactNode;
